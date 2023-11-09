@@ -1,0 +1,8 @@
+.common-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: blue;
+    font-weight: 700;
+    margin-top: 500px;
+}
