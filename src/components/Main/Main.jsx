@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import RegisrtationForm from "../RegistrationForm";
 
 const Main = () => {
+
+
 
     // const [state, setState] = useState('Click text');
     const [text, setText] = useState('Click text');
@@ -42,10 +45,11 @@ const Main = () => {
         setResult(0)
     }
 
-    console.log(firstInput)
+    // console.log(firstInput)
 
     return (
         <div>
+            <RegisrtationForm />
             {/* <button onClick={onButtonClickHandler} type="button">Button</button>
             <div> {text} </div>
 
@@ -54,12 +58,12 @@ const Main = () => {
 
             <button onClick={onMinusNumberHandler} type="button">Minus one</button> */}
 
-            <input type="number" onChange={(event) => onChangeFirstInputHandler(event.target.value)} />
+            {/* <input type="number" onChange={(event) => onChangeFirstInputHandler(event.target.value)} />
             <button onClick={onPlusHandler} type="button">+</button>
             <button onClick={onMinusHandler} type="button">-</button>
             <input type="number" onChange={(event) => onChangeSecondInputHandler(event.target.value)}/>
             <div>{ result }</div>
-            <button onClick={onResetResult} type="button">Reset Result</button>
+            <button onClick={onResetResult} type="button">Reset Result</button> */}
 
         </div>
     )
