@@ -2,7 +2,18 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    color: blue;
+    color: rgb(193, 193, 195);
     font-weight: 700;
-    margin-top: 500px;
+    /* position: fixed;
+    bottom: 0; */
+    padding: 20px;   
+}
+
+footer{
+    width: 100%;
+    padding: 15px;
+    color: rgb(216, 219, 222);
+    background-color: #454242;
+    position: fixed;
+    bottom: 0;
 }

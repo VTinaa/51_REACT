@@ -4,4 +4,7 @@
     justify-content: space-around;
     color: silver;
     font-weight: 700;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgb(75, 73, 73);
 }
