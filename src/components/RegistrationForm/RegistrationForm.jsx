@@ -17,14 +17,14 @@ const RegisrtationForm = () => {
             surname,
             email,
         };
-        // user.push(user)
+
         setUsers([...users, user]);
         setName('');
         setSurname('');
         setEmail('');
 
     }
-    // console.log(users)
+
 
     const onGetName = (value) => {
         setName(value)
@@ -37,7 +37,7 @@ const RegisrtationForm = () => {
     const onGetEmail = (value) => {
         setEmail(value)
     };
-    // console.log(name,surname,email)
+
 
     return (
         <div className="common">
