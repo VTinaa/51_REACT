@@ -1,6 +1,10 @@
-import { useState } from "react";
+import classNames from "classnames";
+import { isEmpty } from "lodash";
 import Input from "../Input";
 import UserCard from "../UserCard";
+
+import { useState, useContext } from "react";
+import { UsersContext } from "../../App";
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -35,14 +39,25 @@ const  DEFAULT_USER =[
 
 const RegisrtationForm = () => {
 
+    // const { onChangeUsersCount } = props;
+
+    // const contextData = useContext(UsersContext);
+    const { changeFunction } = useContext(UsersContext);
+    // console.log(contextData)
+
+
+
     const [ users, setUsers ] = useState(DEFAULT_USER);
+    // onChangeUsersCount(users.length)
     console.log(users)
     const [isEditMode, setEditMode] = useState(false);
+    changeFunction(users.length);
 
     const [name, setName] = useState();
     const [surname, setSurname] = useState();
     const [email, setEmail] = useState();
 
+   //// // const [err, setErr] = useState(false)
     // console.log(users)
 
     const onAddUser = () => {
@@ -54,6 +69,9 @@ const RegisrtationForm = () => {
         };
 
         setUsers([...users, user]);
+       //// // if(isEmpty(name) || isEmpty(surname) || isEmpty(email)) {
+       //// //     setErr(true)
+       //// // }
         setName('');
         setSurname('');
         setEmail('');
@@ -90,6 +108,8 @@ const RegisrtationForm = () => {
         setEmail(curretUser.email)
     };
 
+    //// // const userListClassName = classNames(styles['user-list'],{[styles['border-res']]:err,})
+
 
     return (
         <div className={styles['common']}>
@@ -99,6 +119,7 @@ const RegisrtationForm = () => {
             <button type="button" onClick={onAddUser}>Add User</button>
             {/* <UserCard /> */}
             <div className={styles['user-list']}>
+            {/* <div className={userListClassName}> */}
                 { users.map((user, index) => {
                     const { name, surname, email, id} = user;
                     return (<UserCard key={index} name={name} surname={surname} email={email} id={id} onClickDeleteBtn={onDeletUserHander} onCklickUpdateBtn={onUpdateHander}/>)
