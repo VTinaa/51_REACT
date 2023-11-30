@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import RegisrtationForm from "../RegistrationForm";
+import Products from '../Products';
 
 const Main = () => {
 
+    // const { onChangeUsersCount } = props;
 
 
     // const [state, setState] = useState('Click text');
@@ -49,7 +51,17 @@ const Main = () => {
 
     return (
         <div>
-            <RegisrtationForm />
+            {/* <RegisrtationForm onChangeUsersCount={onChangeUsersCount} /> */}
+
+
+
+            {/* <RegisrtationForm /> */}
+
+
+            <Products />
+
+
+
             {/* <button onClick={onButtonClickHandler} type="button">Button</button>
             <div> {text} </div>
 

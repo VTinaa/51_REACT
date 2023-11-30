@@ -43,8 +43,16 @@
 import NavigationItem from '../NavigationItem/NavigationItem';
 import './Header.css';
 
+import { useContext } from "react";
+import { UsersContext } from "../../App";
+
 
 const Header = () => {
+
+   const { data } = useContext(UsersContext);
+   console.log(data)
+
+
 
    const navElements = [
       {
@@ -85,6 +93,8 @@ const Header = () => {
          }
       </div>
       <NavigationItem text='header' isUppercasetext={false} />
+      {/* <div>User count: {props.usersCount} </div> */}
+      <div>User count: {data} </div>
       </header>);
 }
 

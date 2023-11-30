@@ -1,7 +1,11 @@
 import './footer.css'
 import FooterItem from '../FooterItem';
 
+import { useContext } from "react";
+import { UsersContext } from "../../App";
+
 const Footer = () => {
+    const { data } = useContext(UsersContext);
     return (
 
         <footer>
@@ -11,6 +15,7 @@ const Footer = () => {
                 <FooterItem text='Second elem' isLowercaseText={true} />
                 <FooterItem text='Third elem' isLowercaseText={false} />
                 <FooterItem text='Fourth elem' isLowercaseText={false} />
+                <div>User count: {data} </div>
             </div>
         </footer>
 
