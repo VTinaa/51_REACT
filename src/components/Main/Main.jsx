@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import RegisrtationForm from "../RegistrationForm";
 import Products from '../Products';
+import RefInput from '../RefInput';
+import Modal from '../Modal';
 
 const Main = () => {
 
@@ -53,12 +55,14 @@ const Main = () => {
         <div>
             {/* <RegisrtationForm onChangeUsersCount={onChangeUsersCount} /> */}
 
-
+            <RefInput />
 
             {/* <RegisrtationForm /> */}
 
 
             <Products />
+            
+            <Modal />
 
 
 

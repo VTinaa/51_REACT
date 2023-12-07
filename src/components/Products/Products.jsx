@@ -28,7 +28,7 @@ const Products = () => {
     }, [])
 
     return (
-        <>
+        <div className={styles["common"]}>
             {/* <div className={styles['common']}>
                 <div>{ fetching && 'Data is loading ...' }</div>
                 <div>{ fetchError && `Opps, we have error: ${fetchError}` }</div>
@@ -56,7 +56,7 @@ const Products = () => {
                 <p>Lorem ipsum dolor sit amet.</p>
             </BorderWrapper> */}
             
-        </>
+        </div>
     );
 }
 
